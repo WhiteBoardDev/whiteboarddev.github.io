@@ -1,0 +1,13 @@
+# Site settings
+title: WhiteBoard Developers
+email: evan.tyler.harris@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Learning about tech, building cool stuff, and exploring. Dedicated to raspberry
+  Pis, linux, and open source projects.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://whiteboarddev.github.io" # the base hostname & protocol for your site
+twitter_username: whiteboarddev
+github_username:  whiteboarddev
+
+# Build settings
+markdown: kramdown

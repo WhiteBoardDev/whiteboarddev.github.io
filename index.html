@@ -1,1 +1,51 @@
-Hello World
+---
+layout: default
+---
+
+
+<div class="jumbo-container">
+  <div class="jumbo-item">
+    <span class="jumbo-title">Building cool tools<br> driving too fast<br> and documenting the chaos</span>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm-6">
+      <div class="headline-item">
+        <h2 class="headline-header-text">LAT</h2>
+        <strong>An idea for a tool that tracks public ips (and other info)
+          as servers move through dynamic IPs</strong>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="headline-item">
+          <h2 class="headline-header-text">Blarg</h2>
+            <ul class="post-list">
+            {% for post in site.posts %}
+            <li>
+            <a class="headline-post" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </li>
+          {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--
+  <div class="home">
+
+
+
+
+
+
+
+  <h1 class="page-heading">Posts</h1>
+
+
+
+</div> -->

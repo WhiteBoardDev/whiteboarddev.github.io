@@ -1,0 +1,74 @@
+.hero {
+background: url("../img/ferry_lg.jpg") no-repeat center center fixed;
+-webkit-background-size: cover;
+   -moz-background-size: cover;
+   background-size: cover;
+   height:100%;
+   -o-background-size: cover;
+   background-position-x: 45%;}
+
+
+body {
+  background:none;
+  height:100%;
+}
+
+.jumbo-container{
+  display:flex;
+  justify-content:flex-end;
+}
+
+.jumbo-item{
+  width:500px;
+  height:400px;
+  text-align: right;
+
+}
+
+.jumbo-title{
+  font-size: 49px;
+    font-weight: lighter;
+    letter-spacing: 4px;
+}
+
+
+.headline-item{
+height:450px;
+width:450px;
+padding: 5px;
+// border-radius: 5px;
+background-color: rgba(32, 32, 32, 0.46);
+  color: rgb(240, 240, 240);
+  letter-spacing: 2px;
+  border-bottom: 2px rgba(255, 57, 57, 0.68) solid;
+  box-shadow: 0px 0px 93px 27px rgba(0,0,0,0.55);
+  border-top: 2px rgba(255, 57, 57, 0.68) solid;
+}
+
+.headline-item a {
+  color: rgb(210, 226, 255);
+}
+.headline-header-text{
+  width: 100%;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 0 0 5px #020202;
+    // border-bottom: 2px rgb(249, 140, 140) solid;
+}
+
+.post-list{
+  list-style: none;
+  font-size: 20px;
+}
+
+.post-list li{
+  border-left: 1px red solid;
+  padding-left:5px;
+}
+
+.primary-content{
+  min-height: 100%;
+	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	height: 100%;
+	margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
