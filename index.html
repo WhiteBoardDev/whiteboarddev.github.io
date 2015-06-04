@@ -11,27 +11,59 @@ layout: default
 
 
 <div class="container headline-container">
-  <div class="row">
+<div class="row">
+  <div class="col-sm-12">
+    <div class="headline-item">
 
+        {% for post in site.posts %}
+        {% if post.state == 'inprogress' %}
+    <h2 class="headline-header-text">  <a class="headline-post" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+    <article>
+      {{ post.content }}
+    </article>
+
+
+        {% endif %}
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+
+  <div class="row">
     <div class="col-sm-6">
       <div class="headline-item">
-        <h2 class="headline-header-text">LAT</h2>
-        <strong>An idea for a tool that tracks public ips (and other info)
-          as servers move through dynamic IPs</strong>
-        </div>
+        <h2 class="headline-header-text">to do</h2>
+          <ul class="post-list">
+          {% for post in site.posts reversed sort_by:priority %}
+          {% if post.state == 'todo' %}
+          <li>
+            {{ post.priority }}
+          <a class="headline-post" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          {{ post.excerpt }}
+          </li>
+          {% endif %}
+        {% endfor %}
+        </ul>
       </div>
-      <div class="col-sm-6">
-        <div class="headline-item">
-          <h2 class="headline-header-text">Blarg</h2>
-            <ul class="post-list">
-            {% for post in site.posts %}
-            <li>
-            <a class="headline-post" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </li>
-          {% endfor %}
-          </ul>
-        </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="headline-item">
+        <h2 class="headline-header-text">done</h2>
+        <ul class="post-list">
+        {% for post in site.posts %}
+        {% if post.state == 'done' %}
+        <li>
+          {{ forloop.index }}
+        <a class="headline-post" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        {{ post.excerpt }}
+        </li>
+        {% endif %}
+      {% endfor %}
+      </ul>
       </div>
+
 
     </div>
   </div>
